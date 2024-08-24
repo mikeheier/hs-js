@@ -1,18 +1,22 @@
-import GeneralTests from './general.test.js';
-import ModelTests from './model.test.js';
-import StorageTests from './storage.test.js';
-import UuidTests from './uuid.test.js';
+import GeneralTest from './general.test.js';
+import ModelTest from './model.test.js';
+import StorageTest from './storage.test.js';
+import UuidTest from './uuid.test.js';
+import DateUtilTest from './dateutil.test.js';
 
 const tests = [
-   GeneralTests,
-   ModelTests,
-   StorageTests,
-   UuidTests
+   GeneralTest,
+   ModelTest,
+   StorageTest,
+   UuidTest,
+   DateUtilTest
 ];
 
 tests
    .forEach((test) => {
       if (typeof test === 'function') {
+         console.log('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
          test();
+         console.log('----------------------------------------------------------------------------------------------------------\n');
       }
    });

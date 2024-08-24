@@ -1,6 +1,6 @@
 {
   "name": "@mikeheier/hs-js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Mind Over Data core javascript library",
   "type": "module",
   "main": "dist/hs-core.cjs",
@@ -36,11 +36,12 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node tests/_index.js",
     "build": "rollup -c",
     "login": "npm login --registry https://npm.pkg.github.com",
     "pubToRepo": "npm publish --tag latest",
-    "deploy": "npm run login && npm version --no-git-tag-version patch && npm run build && npm run pubToRepo",
+    "deploy:login": "npm run login && npm run deploy",
+    "deploy": "npm version --no-git-tag-version patch && npm run build && npm run pubToRepo",
     "lint": "eslint . --ext .js --fix --ignore-path .gitignore dist"
   },
   "repository": {
@@ -55,9 +56,7 @@
   "dependencies": {
     "axios": "^1.2.2",
     "lodash": "^4.17.21",
-    "moment": "^2.29.4",
-    "moment-jdateformatparser": "^1.2.1",
-    "moment-timezone": "^0.5.40"
+    "luxon": "^3.5.0"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^4.0.2",
