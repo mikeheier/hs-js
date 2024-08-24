@@ -1,42 +1,42 @@
 {
   "name": "@mikeheier/hs-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Mind Over Data core javascript library",
   "type": "module",
-  "main": "dist/hs-core.cjs",
-  "module": "dist/hs-core.mjs",
+  "main": "./dist/hs-core.cjs",
+  "module": "./dist/hs-core.mjs",
   "exports": {
     ".": {
-      "import": "dist/hs-core.mjs",
-      "require": "dist/hs-core.cjs"
+      "import": "./dist/hs-core.mjs",
+      "require": "./dist/hs-core.cjs"
     },
     "./utils": {
-      "import": "dist/utils.mjs",
-      "require": "dist/utils.cjs"
+      "import": "./dist/utils.mjs",
+      "require": "./dist/utils.cjs"
     },
     "./formatter": {
-      "import": "dist/formatter.mjs",
-      "require": "dist/formatter.cjs"
+      "import": "./dist/formatter.mjs",
+      "require": "./dist/formatter.cjs"
     },
     "./date-util": {
-      "import": "dist/date-util.mjs",
-      "require": "dist/date-util.cjs"
+      "import": "./dist/date-util.mjs",
+      "require": "./dist/date-util.cjs"
     },
     "./country-util": {
-      "import": "dist/country-util.mjs",
-      "require": "dist/country-util.cjs"
+      "import": "./dist/country-util.mjs",
+      "require": "./dist/country-util.cjs"
     },
     "./global-cache": {
-      "import": "dist/global-cache.mjs",
-      "require": "dist/global-cache.cjs"
+      "import": "./dist/global-cache.mjs",
+      "require": "./dist/global-cache.cjs"
     },
     "./image-util": {
-      "import": "dist/image-util.mjs",
-      "require": "dist/image-util.cjs"
+      "import": "./dist/image-util.mjs",
+      "require": "./dist/image-util.cjs"
     },
     "./node-util": {
-      "import": "dist/node-util.mjs",
-      "require": "dist/node-util.cjs"
+      "import": "./dist/node-util.mjs",
+      "require": "./dist/node-util.cjs"
     }
   },
   "scripts": {
