@@ -8,7 +8,7 @@ export function yankArgs() {
 
    // first 2 arg are node.exe & nuxt.js
    const args = process.argv.slice(2, process.argv.length);
-   logger.error(process.argv);
+   logger.debug(process.argv);
 
    if (args && args.length) {
       args
