@@ -38,6 +38,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
+    "login": "npm login --registry https://npm.pkg.github.com",
     "pubToRepo": "npm publish --tag latest",
     "deploy": "npm run login && npm version --no-git-tag-version patch && npm run build && npm run pubToRepo",
     "lint": "eslint . --ext .js --fix --ignore-path .gitignore dist"
