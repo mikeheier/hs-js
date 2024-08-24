@@ -63,24 +63,12 @@ function _config(inputName, outputName, minifyIt) {
             sourcemap: true,
             compact: true
          },
-         // {
-         //    format: 'esm',
-         //    file: `./dist/${outputName}.min.mjs`,
-         //    sourcemap: true,
-         //    compact: true
-         // },
          {
             format: 'cjs',
             file: `./dist/${outputName}.cjs`,
             sourcemap: true,
             compact: true
          }
-         // {
-         //    format: 'cjs',
-         //    file: `./dist/${outputName}.min.cjs`,
-         //    sourcemap: true,
-         //    compact: true
-         // }
       ],
 
       external: [],
