@@ -83,5 +83,6 @@ export default [
    ...config('libs/dateutil', 'date-util'),
    ...config('libs/globalcache', 'global-cache'),
    ...config('libs/countryutil', 'country-util'),
-   ...config('libs/imageutil', 'image-util')
+   ...config('libs/imageutil', 'image-util'),
+   ...config('libs/nodeutil', 'node-util')
 ];

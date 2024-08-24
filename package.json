@@ -33,6 +33,10 @@
     "./image-util": {
       "import": "dist/image-util.mjs",
       "require": "dist/image-util.cjs"
+    },
+    "./node-util": {
+      "import": "dist/node-util.mjs",
+      "require": "dist/node-util.cjs"
     }
   },
   "scripts": {
@@ -63,6 +67,7 @@
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "colors": "^1.4.0",
     "eslint": "^8.31.0",
     "rollup": "^3.9.1",
     "rollup-plugin-esbuild-minify": "^1.1.2",
