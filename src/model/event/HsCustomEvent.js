@@ -38,3 +38,7 @@ class HsCustomEvent extends CustomEvent {
       }
    }
 }
+
+export {
+   HsCustomEvent
+};
