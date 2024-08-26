@@ -19,5 +19,6 @@ export * from '@/StorageManager.js';
 // data models
 export * from '@/model/BaseModel.js';
 export * from '@/model/Preferences.js';
+export * from '@/model/event/HsCustomEvent.js';
 export * from '@/model/filter/BaseFilterModel.js';
 export * from '@/model/csv/CsvRepository.js';
