@@ -1,6 +1,6 @@
 {
   "name": "@mikeheier/hs-js",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Mind Over Data core javascript library",
   "type": "module",
   "main": "./dist/hs-core.cjs",
