@@ -8,7 +8,7 @@ const colors = [
   { name: '--hs-navy-blue', hex: '#012240' },
   { name: '--hs-indigo', hex: '#6610f2' },
   { name: '--hs-purple', hex: '#6f42c1' },
-  { name: '--hs-pink', hex: '#d63384' },
+  { name: '--hs-pink', hex: '#ffc8dd' },
   { name: '--hs-red', hex: '#dc3545' },
   { name: '--hs-orange', hex: '#fd7e14' },
   { name: '--hs-yellow', hex: '#ffc107' },
@@ -22,8 +22,11 @@ const colors = [
   // greys
   { name: '--hs-grey', hex: '#808080' },
   { name: '--hs-grey-dark', hex: '#555555' },
+  { name: '--hs-grey-050', hex: '#f5f3f4' },
   { name: '--hs-grey-100', hex: '#eeeeee' },
+  { name: '--hs-grey-150', hex: '#ededed' },
   { name: '--hs-grey-200', hex: '#dddddd' },
+  { name: '--hs-grey-250', hex: '#dcdcdc' },
   { name: '--hs-grey-300', hex: '#cccccc' },
   { name: '--hs-grey-400', hex: '#bbbbbb' },
   { name: '--hs-grey-500', hex: '#aaaaaa' },
@@ -83,7 +86,7 @@ export default () => {
          console.log(`${templt},`);
       });
 
-   console.log('\nlib color constants');
+   console.log('\nlib color constants (library/utils/Constants.js)');
    colors
       .forEach((color) => {
          const name = color.name.replace('--hs-', '');
