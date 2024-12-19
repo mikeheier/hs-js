@@ -103,6 +103,7 @@ export function date(date, options = {}) {
  * options
  *    includeDate {boolean} - default true, flag to include date part
  *    includeTime {boolean} - default true, flag to include time part
+ *    seperator {string} - default spacee
  * See DateUtil.format for more options
  */
 export function dateTime(date, options) {
@@ -118,7 +119,7 @@ export function dateTime(date, options) {
 
    if (includeTime) {
       if (format) {
-         format += ' ';
+         format += (options.seperator ?? ' ');
       }
 
       format += _getCurrentPreferences().getTimeFormat();

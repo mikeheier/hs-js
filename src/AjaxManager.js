@@ -18,7 +18,7 @@ const $am = {
 
    /**
     * A way to override authorization type if "Bearer" is not the desired type.
-    * The token aargument is the value returned via getAccessToken
+    * The token argument is the value returned via getAccessToken
     */
    renderAuthorizationHeaderValue(token) {
       return `Bearer ${token}`;
@@ -93,6 +93,10 @@ const applyAuthHeader = (reqOps) => {
  * ctx {
  *    send // currently axios or custom method for fixtures
  *    fallback // method to use if ajaxSend request fails.  only if fixtures is off and fallback is true
+ *    globalLoader
+ *    getAccessToken
+ *    renderAuthorizationHeaderValue
+ *    applyCancelCapabilities
  * }
  * 
  * axiosConfig -> https://github.com/axios/axios#request-config

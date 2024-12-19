@@ -5,7 +5,7 @@ export const Profiles = {
    Default: {
       distanceUoM: 'm',
       temperatureUoM: 'C',
-      dateFormat: 'YYYY-MM-DD',
+      dateFormat: 'yyyy-MM-DD',
       customDateFormat: '',
       timeFormat: 'HH:mm:ss z',
       customTimeFormat: ''
