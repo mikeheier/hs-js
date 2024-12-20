@@ -5,15 +5,15 @@ export const Profiles = {
    Default: {
       distanceUoM: 'm',
       temperatureUoM: 'C',
-      dateFormat: 'yyyy-MM-DD',
+      dateFormat: 'yyyy-MM-dd',
       customDateFormat: '',
-      timeFormat: 'HH:mm:ss z',
+      timeFormat: 'HH:mm:ss ZZZZ',
       customTimeFormat: ''
    },
 
    Public: {
       Inventory: {
-         timeFormat: 'hh:mm A z'
+         timeFormat: 'hh:mm a ZZZZ'
       }
    }
 };
