@@ -71,7 +71,7 @@ function _config(inputName, outputName, minifyIt) {
          }
       ],
 
-      external: [],
+      external: ['luxon'],
       plugins
    };
 }
