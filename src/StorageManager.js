@@ -36,14 +36,18 @@ function getSessionStorage() {
 
 class Storage {
    /**
-    * storageObject local|session|etc.
+    * storageInterface local|session|etc.
+    *    setItem(key, item):void
+    *    getItem(key):*
+    *    removeItem(key):void
+    *
     * options
     *    name
     *    context
     * 
     */
-   constructor(storageObject, options) {
-      this._store = storageObject ?? generateStorageFacade();
+   constructor(storageInterface, options) {
+      this._store = storageInterface ?? generateStorageFacade();
 
       if (options) {
          Object
@@ -54,7 +58,7 @@ class Storage {
       }
 
       // make sure these values exist
-      this.name = this.name || 'oti.so';
+      this.name = this.name || 'hs.so';
       this.context = this.context || 'pub';
    }
 
@@ -80,7 +84,7 @@ class Storage {
    get(key, isObject) {
       const result = this._store.getItem(this.getFullKey(key));
 
-      if (result && !!isObject) {
+      if (result && isObject) {
          try {
             return JSON.parse(result);
          }

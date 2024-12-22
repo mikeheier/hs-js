@@ -744,6 +744,10 @@ export function xor(...args) {
  * Shuffle an array
  */
 export function shuffle(array) {
+   if (!Array.isArray(array)) {
+      return array;
+   }
+
    let currentIndex = array.length;
    let randomIndex = 0;
 

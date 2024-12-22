@@ -333,6 +333,10 @@ export function yesNo(val) {
    return _translate('copy.' + (val ? 'yes' : 'no'));
 }
 
+export function proper(val) {
+   return `${val ?? ''}`.trim().split(/\s/g).map(s => `${s.charAt(0).toUpperCase()}${s.slice(1, s.length)}`).join(' ');
+}
+
 export const Formatter = {
    batteryLevel,
    country,
@@ -349,7 +353,8 @@ export const Formatter = {
    temperature,
    time,
    timespan,
-   yesNo
+   yesNo,
+   proper
 };
 
 export function injectPreferences(prefs) {
