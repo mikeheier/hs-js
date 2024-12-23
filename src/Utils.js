@@ -764,6 +764,49 @@ export function shuffle(array) {
    return array;
 }
 
+/**
+ * content
+ * options
+ *    fileName
+ *    mimeType
+ *    extension
+ */
+export function saveFile(content, options) {
+   if (!content) {
+      return;
+   }
+
+   const ops = {
+      fileName: 'file',
+      mimeType: 'text/plain',
+      extension: 'txt',
+      ...options
+   };
+   const extFragment = ops.extension ? `.${ops.extension}` : '';
+   const file = new Blob([content], { type: ops.mimeType });
+   const a = document.createElement('a');
+   const url = URL.createObjectURL(file);
+
+   a.href = url;
+   a.download = `${ops.fileName}${extFragment}`;
+
+   document.body.appendChild(a);
+
+   a.click();
+
+   setTimeout(() => {
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+   }, 0);
+}
+
+export function saveCsv(content, fileName) {
+   saveFile(content, {
+      fileName,
+      extension: 'csv'
+   });
+}
+
 export const Utils = {
    clearTextSelection,
    coalesce,
@@ -794,5 +837,7 @@ export const Utils = {
    twosComp,
    wrapArray,
    xor,
-   shuffle
+   shuffle,
+   saveCsv
+   saveFile
 };
