@@ -838,6 +838,6 @@ export const Utils = {
    wrapArray,
    xor,
    shuffle,
-   saveCsv
+   saveCsv,
    saveFile
 };
