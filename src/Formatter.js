@@ -334,7 +334,7 @@ export function yesNo(val) {
 }
 
 export function proper(val) {
-   return `${val ?? ''}`.trim().split(/\s/g).map(s => `${s.charAt(0).toUpperCase()}${s.slice(1, s.length)}`).join(' ');
+   return `${val ?? ''}`.trim().split(/\s|_/g).map(s => `${s.charAt(0).toUpperCase()}${s.slice(1, s.length)}`).join(' ');
 }
 
 export const Formatter = {
