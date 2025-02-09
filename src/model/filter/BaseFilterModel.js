@@ -54,8 +54,10 @@ class BaseFilterModel extends BaseModel {
     *    search: 'mod',
     *    status: '3,6,9'
     * }
+    * 
+    * externalParams - e.g. search params via table control
     */
-   toQueryParams() {
+   toQueryParams(externalParams) {
       return null;
    }
 
