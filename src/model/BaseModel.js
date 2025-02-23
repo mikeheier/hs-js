@@ -178,6 +178,10 @@ class BaseModel {
          const attrs = this._attributes;
          const dataCopy = toPlainObject(data);
 
+         // do not copy BaseModel props
+         delete data._mid;
+         delete data._attributes;
+
          attrs
             .forEach((attr) => {
                const key = attr.name;
