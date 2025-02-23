@@ -179,8 +179,8 @@ class BaseModel {
          const dataCopy = toPlainObject(data);
 
          // do not copy BaseModel props
-         delete data._mid;
-         delete data._attributes;
+         delete dataCopy._mid;
+         delete dataCopy._attributes;
 
          attrs
             .forEach((attr) => {
