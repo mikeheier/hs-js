@@ -57,23 +57,23 @@
   "publishConfig": {
     "@mikeheier:registry": "https://npm.pkg.github.com"
   },
-  "dependencies": {
-    "axios": "^1.2.2",
-    "lodash": "^4.17.21",
-    "luxon": "^3.5.0"
-  },
   "devDependencies": {
-    "@rollup/plugin-alias": "^4.0.2",
-    "@rollup/plugin-commonjs": "^24.0.0",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "colors": "^1.4.0",
-    "eslint": "^8.31.0",
-    "rollup": "^3.9.1",
-    "rollup-plugin-esbuild-minify": "^1.1.2",
+    "eslint": "^9.22.0",
+    "rollup": "^4.35.0",
+    "rollup-plugin-esbuild-minify": "^1.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "files": [
     "dist/*"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^1.8.3",
+    "lodash": "^4.17.21",
+    "luxon": "^3.5.0"
+  }
 }

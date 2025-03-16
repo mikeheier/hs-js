@@ -130,7 +130,7 @@ class Storage {
    }
 }
 
-const defaultGlobalStorageName = 'oti.gso';
+const defaultGlobalStorageName = 'hs.gso';
 
 const GlobalStorageManager = {
    session: new Storage(getSessionStorage(), { name: defaultGlobalStorageName }),
