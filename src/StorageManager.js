@@ -1,15 +1,15 @@
-function generateMemStorage() {
-   const data = {};
+const memCache = {};
 
+function generateMemStorage() {
    return {
       removeItem(key) {
-         delete data[key];
+         delete memCache[key];
       },
       setItem(key, value) {
-         data[key] = value;
+         memCache[key] = value;
       },
       getItem(key) {
-         return data[key];
+         return memCache[key];
       }
    };
 }
