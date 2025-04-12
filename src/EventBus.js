@@ -38,7 +38,7 @@ function addEventListener(type, cb, once, context, map) {
          existing.once = once;
          existing.context = context;
 
-         return typeHandlers[ndx];
+         return existing;
       }
 
       handler.id = handlerNdx;

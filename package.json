@@ -63,8 +63,8 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "colors": "^1.4.0",
-    "eslint": "^9.22.0",
-    "rollup": "^4.35.0",
+    "eslint": "^9.24.0",
+    "rollup": "^4.40.0",
     "rollup-plugin-esbuild-minify": "^1.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4"
   },
@@ -72,8 +72,8 @@
     "dist/*"
   ],
   "dependencies": {
-    "axios": "^1.8.3",
+    "axios": "^1.8.4",
     "lodash": "^4.17.21",
-    "luxon": "^3.5.0"
+    "luxon": "^3.6.1"
   }
 }

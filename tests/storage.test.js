@@ -1,6 +1,12 @@
-import { GlobalStorageManager } from '../dist/hs-core.min.mjs';
+import { GlobalStorageManager, Storage } from '../dist/hs-core.min.mjs';
 
 export default () => {
+   const memStore = new Storage('mem');
+
+   memStore.set('hello', 'Mike');
+   console.log(memStore.get('hello'));
+   console.log(memStore);
+
    GlobalStorageManager.session.set('name', 'Mike');
    GlobalStorageManager.session.set('setItem', () => 'Mike');
 

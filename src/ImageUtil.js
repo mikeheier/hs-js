@@ -11,7 +11,7 @@ export function loadImage(path) {
          console.log('%c<<< ERROR >>>', 'color:#ff0000;', err);
          // always resolve
          resolve();
-      }
+      };
 
       image.src = path;
    });

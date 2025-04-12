@@ -1,13 +1,15 @@
-function generateStorageFacade() {
+function generateMemStorage() {
+   const data = {};
+
    return {
       removeItem(key) {
-         delete this[key];
+         delete data[key];
       },
       setItem(key, value) {
-         this[key] = value;
+         data[key] = value;
       },
       getItem(key) {
-         return this[key];
+         return data[key];
       }
    };
 }
@@ -20,7 +22,7 @@ function getLocalStorage() {
       /* do nothing */
    }
 
-   return generateStorageFacade();
+   return generateMemStorage();
 }
 
 function getSessionStorage() {
@@ -31,15 +33,32 @@ function getSessionStorage() {
       /* do nothing */
    }
 
-   return generateStorageFacade();
+   return generateMemStorage();
+}
+
+function getInterfaceByName(name) {
+   if (/local/i.test(name)) {
+      return getLocalStorage();
+   }
+   if (/session/i.test(name)) {
+      return getSessionStorage();
+   }
+   else if (/mem/i.test(name)) {
+      return generateMemStorage();
+   }
+
+   return null;
 }
 
 class Storage {
    /**
-    * storageInterface local|session|etc.
-    *    setItem(key, item):void
-    *    getItem(key):*
-    *    removeItem(key):void
+    * storageInterface
+    *    defaults to mem
+    *    string local|session|mem
+    *    interface
+    *       setItem(key, item):void
+    *       getItem(key):*
+    *       removeItem(key):void
     *
     * options
     *    name
@@ -47,7 +66,16 @@ class Storage {
     * 
     */
    constructor(storageInterface, options) {
-      this._store = storageInterface ?? generateStorageFacade();
+      if (storageInterface && typeof storageInterface === 'object') {
+         this._store = storageInterface;
+      }
+      else if (typeof storageInterface === 'string') {
+         this._store = getInterfaceByName(storageInterface);
+      }
+
+      if (!this._store) {
+         this._store = getLocalStorage();
+      }
 
       if (options) {
          Object
